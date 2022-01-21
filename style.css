@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --fw-lite: 300;
+  --fw-regular: 400;
+  --fw-blod: 600;
+
+  --clr-red: hsl(0, 36%, 70%);
+  --clr-soft-red: hsl(0, 93%, 68%);
+  --clr-dark-red: hsl(0, 6%, 24%);
+  --clr-gradient-1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+  --clr-gradient-2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+}
+
+.logo {
+  margin: 2rem;
+}
+
+.title {
+  margin: 4rem auto 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.title-span {
+  display: block;
+  font-weight: var(--fw-lite);
+  color: var(--clr-red);
+}
+
+.desc {
+  text-align: center;
+  margin: auto 1rem 1.5rem;
+  color: var(--clr-red);
+}
+
+form {
+  border: 1px solid var(--clr-red);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  margin: auto 2rem;
+}
+
+.input {
+  padding: .9rem;
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+}
+
+.error {
+  position: absolute;
+  right: 80px;
+  transform: translate(50%, -50%);
+  top: 50%;
+  display: none;
+}
+
+.error-msg {
+  color: var(--clr-red);
+  margin-left: 3rem;
+  margin-top: 1rem;
+  display: none;
+}
+
+.verify .error,
+.verify + .error-msg {
+  display: block;
+}
+
+.btn {
+  border: none;
+  background-image: linear-gradient(var(--clr-gradient-2));
+  border-radius: 50px;
+  width: 4rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.input::placeholder {
+  color: var(--clr-red);
+}
+
+.attribution {
+  text-align: center;
+  margin: 1rem;
+}
+
+.desktop-hero {
+  display: none;
+}
+
+.mobile-hero {
+   width: 100%;
+ }
+
+@media screen and (min-width: 400px){
+ .mobile-hero {
+   display: none;
+ } 
+
+ main {
+   display: flex;
+   height: 100vh;
+ }
+
+ .desktop-hero {
+   display: block;
+   width: 100%;
+   height: 100%;
+ }
+
+ .container {
+   margin-left: 10%;
+ }
+
+ .title, .desc, form, .logo {
+   text-align: left;
+   margin-left: 0;
+ }
+
+ .title {
+   margin-right: 3rem;
+ }
+
+ .error-msg {
+  margin-left: 1rem;
+  }
+}
